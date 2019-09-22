@@ -1,1 +1,31 @@
-jamitek
+<html>
+    <head>
+        <title>jamitek_</title>
+    </head>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: monospace;
+        }
+        #consoleBox {
+            margin-top: 20%;
+            margin-left: 20%;
+        }
+        #blinkingCursor {
+            animation-name: blink;
+            animation-duration: 1000ms;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes blink {
+            from, to { color: transparent; }
+            50% { color: white; }
+        }
+    </style>
+    <body>
+        <div id="consoleBox">
+            <h1>jamitek<span id="blinkingCursor">_</span></h1>
+        </div>
+    </body>
+</html>
