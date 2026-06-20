@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Void &mdash; Support</title>
+  <meta name="description" content="Support for Void, a minimalist roguelite loot RPG." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #101018;
+      --bg-wave1: #261745;
+      --bg-wave2: #0d1130;
+      --card: #1c1b1f;
+      --primary: #bb86fc;
+      --secondary: #03dac5;
+      --text: #e6e1ee;
+      --muted: #8c889a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: "Pixelify Sans", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 80% -10%, var(--bg-wave1) 0%, transparent 60%),
+        radial-gradient(700px 500px at 10% 110%, var(--bg-wave2) 0%, transparent 55%),
+        var(--bg);
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    .glyph {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #000;
+      box-shadow: 0 0 0 2px var(--primary), 0 0 32px rgba(187, 134, 252, 0.35);
+      image-rendering: pixelated;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin: 0 0 4px;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin: 0 0 36px;
+      letter-spacing: 0.02em;
+    }
+
+    .flavor {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: var(--secondary);
+      min-height: 3.4em;
+      margin: 0 0 36px;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    .flavor.show { opacity: 1; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(187, 134, 252, 0.18);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: left;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 6px;
+      color: var(--primary);
+    }
+
+    .card p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    a.contact {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #381e72;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    a.contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(187, 134, 252, 0.4);
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 36px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="glyph" src="void-icon.png" alt="Void app icon" />
+    <h1>Void</h1>
+    <p class="subtitle">Minimalist roguelite loot RPG</p>
+
+    <p class="flavor" id="flavor"></p>
+
+    <section class="card">
+      <h2>Need help?</h2>
+      <p>Questions, bug reports, save issues, or feedback. Reach out and a real person will get back to you.</p>
+      <a class="contact" href="mailto:jaakkoj.apps@gmail.com?subject=Void%20Support">jaakkoj.apps@gmail.com</a>
+      <p class="meta">Please include your device model and OS version so we can help faster.</p>
+    </section>
+
+    <footer>The Void does not grieve. Neither should you.</footer>
+  </main>
+
+  <script>
+    var flavors = [
+      "Even the deepest dungeon has a way out. So does this.",
+      "Lost in the dark? A guiding hand is closer than it seems.",
+      "No hero stands alone. Send word, and aid will follow.",
+      "Stuck on a stage? Some puzzles are solved with a letter, not a sword.",
+      "Every shard you sacrifice teaches us something. So does every message.",
+      "The Void answers slowly. We answer faster.",
+      "A bug crept in from the breach? Point us to it and we'll cast it back.",
+      "Your save is precious. If it falters, we will help you recover it.",
+      "Speak into the dark. Unlike the Void, we listen.",
+      "Whatever the trouble, it can be mended. Reach out."
+    ];
+    var el = document.getElementById("flavor");
+    el.textContent = flavors[Math.floor(Math.random() * flavors.length)];
+    requestAnimationFrame(function () { el.classList.add("show"); });
+  </script>
+</body>
+</html>
