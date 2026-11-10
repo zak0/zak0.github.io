@@ -3,175 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Void &mdash; Support</title>
-  <meta name="description" content="Support for Void, a minimalist roguelite loot RPG." />
+  <title>Void: Roguelite loot grind</title>
+  <meta name="description" content="Void is a dark, minimalist roguelite about loot. Read the drops, improve your gear and push deeper into the Void. No ads, playable offline. Support and contact." />
+  <meta name="theme-color" content="#101018" />
+  <meta property="og:title" content="Void: Roguelite loot grind" />
+  <meta property="og:description" content="A dark, minimalist roguelite about loot. No ads, playable offline." />
+  <meta property="og:image" content="https://jamitek.com/lootgame/void-icon.png" />
+  <link rel="icon" href="void-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #101018;
-      --bg-wave1: #261745;
-      --bg-wave2: #0d1130;
-      --card: #1c1b1f;
-      --primary: #bb86fc;
-      --secondary: #03dac5;
-      --text: #e6e1ee;
-      --muted: #8c889a;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body { height: 100%; }
-
-    body {
-      margin: 0;
-      font-family: "Pixelify Sans", system-ui, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(900px 500px at 80% -10%, var(--bg-wave1) 0%, transparent 60%),
-        radial-gradient(700px 500px at 10% 110%, var(--bg-wave2) 0%, transparent 55%),
-        var(--bg);
-      min-height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 20px;
-    }
-
-    main {
-      width: 100%;
-      max-width: 520px;
-      text-align: center;
-    }
-
-    .glyph {
-      width: 88px;
-      height: 88px;
-      margin: 0 auto 24px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      background: #000;
-      box-shadow: 0 0 0 2px var(--primary), 0 0 32px rgba(187, 134, 252, 0.35);
-      image-rendering: pixelated;
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      margin: 0 0 4px;
-      color: #fff;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      color: var(--muted);
-      margin: 0 0 36px;
-      letter-spacing: 0.02em;
-    }
-
-    .flavor {
-      font-size: 1.15rem;
-      line-height: 1.5;
-      color: var(--secondary);
-      min-height: 3.4em;
-      margin: 0 0 36px;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-    }
-    .flavor.show { opacity: 1; }
-
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(187, 134, 252, 0.18);
-      border-radius: 16px;
-      padding: 28px 24px;
-      text-align: left;
-    }
-
-    .card h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin: 0 0 6px;
-      color: var(--primary);
-    }
-
-    .card p {
-      margin: 0 0 20px;
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    a.contact {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      padding: 14px 20px;
-      border-radius: 12px;
-      background: var(--primary);
-      color: #381e72;
-      font-weight: 600;
-      font-size: 1.05rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    a.contact:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(187, 134, 252, 0.4);
-    }
-
-    .meta {
-      margin-top: 18px;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    footer {
-      margin-top: 36px;
-      font-size: 0.8rem;
-      color: var(--muted);
-      letter-spacing: 0.03em;
-    }
-  </style>
+  <link rel="stylesheet" href="void.css" />
 </head>
 <body>
+  <header class="wrap nav">
+    <a class="brand" href="./"><img src="void-icon.png" alt="" />Void</a>
+    <nav class="nav-links">
+      <a href="altar.html">The Altar<span class="dot" aria-label="coming soon"></span></a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
   <main>
-    <img class="glyph" src="void-icon.png" alt="Void app icon" />
-    <h1>Void</h1>
-    <p class="subtitle">Minimalist roguelite loot RPG</p>
-
-    <p class="flavor" id="flavor"></p>
-
-    <section class="card">
-      <h2>Need help?</h2>
-      <p>Questions, bug reports, save issues, or feedback. Reach out and a real person will get back to you.</p>
-      <a class="contact" href="mailto:support@jamitek.com?subject=Void%20Support">send an email</a>
-      <p class="meta">Please include your device model and OS version so we can help faster.</p>
+    <section class="wrap hero">
+      <div>
+        <span class="pill pill-purple">Roguelite loot grind</span>
+        <h1>Void</h1>
+        <p class="flavor">Something stirs beneath the world. Dare to face the Void?</p>
+        <p class="lead">A dark, minimalist roguelite about the thing you came for: better gear. Battles play out on their own. You read the drops, keep what's better, and push deeper.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/app/id6774275583">Get it on the App Store</a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.jamitek.lootgame.android">Get it on Google Play</a>
+        </div>
+        <div class="meta-line">
+          <span>No ads</span>
+          <span>No pay-to-win</span>
+          <span>Playable offline</span>
+        </div>
+      </div>
     </section>
 
-    <footer>The Void does not grieve. Neither should you.</footer>
+    <section class="wrap">
+      <a class="card announce" href="altar.html">
+        <div>
+          <span class="pill pill-green">Coming soon</span>
+          <h2>The Altar Awakens</h2>
+          <p>Prestige is being rebuilt from the ground up. Rebirth to raise your Altar Rank and open a constellation of perks, ring by ring.</p>
+          <span class="go">See what's coming &rarr;</span>
+        </div>
+        <canvas data-constellation aria-label="The new perk constellation"></canvas>
+      </a>
+    </section>
+
+    <section class="wrap">
+      <h2>Die. Upgrade. Repeat.</h2>
+      <p class="lead muted">A long game you can play in small pieces. Grab some loot on a coffee break, or settle in and push for the next World Phase.</p>
+      <div class="grid" style="margin-top: 28px;">
+        <div class="card feature">
+          <img class="pixel" src="assets/sprites/weapon_sword_010.png" alt="" />
+          <h3>Loot grind</h3>
+          <p>9 gear slots, 15 weapon types and 6 rarity tiers. Every drop is a comparison worth reading.</p>
+        </div>
+        <div class="card feature">
+          <img class="pixel" src="assets/sprites/misc_enemy_005.png" alt="" />
+          <h3>Auto-battles</h3>
+          <p>Fights resolve on their own. Tap through them as fast as you like, or watch a replay to see every hit.</p>
+        </div>
+        <div class="card feature">
+          <img class="pixel" src="assets/sprites/misc_cog_000.png" alt="" />
+          <h3>Crafting</h3>
+          <p>Upgrade the gear you love at the Workshop to push further, faster.</p>
+        </div>
+        <div class="card feature">
+          <img class="pixel" src="assets/sprites/misc_candle_000.png" alt="" />
+          <h3>Prestige</h3>
+          <p>Rebirth at the Altar for shards, and spend them on perks that carry into every run.</p>
+        </div>
+        <div class="card feature">
+          <img class="pixel" src="assets/sprites/armor_shield_000.png" alt="" />
+          <h3>Three classes</h3>
+          <p>Warrior, Rogue and Mage, each covering what the others cannot.</p>
+        </div>
+        <div class="card feature">
+          <img class="pixel" src="assets/sprites/misc_star_000.png" alt="" />
+          <h3>Achievements and cloud saves</h3>
+          <p>Earn achievements, climb the leaderboard, and keep your progress safe in the cloud.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Screenshots</h2>
+      <div class="gallery store">
+        <figure><a class="shot" href="assets/store/large/mainloop_loot.webp"><img src="assets/store/mainloop_loot.webp" alt="Endless loot: compare drops, then sell, salvage or equip" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/battle.webp"><img src="assets/store/battle.webp" alt="Automatic battles that resolve on their own" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/itemupgrade.webp"><img src="assets/store/itemupgrade.webp" alt="Upgrade your gear at the Workshop" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/itemupgrade_attune.webp"><img src="assets/store/itemupgrade_attune.webp" alt="Grind your way with many mechanics for improving loot" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/crucible.webp"><img src="assets/store/crucible.webp" alt="Manage materials at the Crucible" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/mainloop_idle.webp"><img src="assets/store/mainloop_idle.webp" alt="Buffs and boosts from prestige and achievements" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/world.webp"><img src="assets/store/world.webp" alt="Increasing challenge through the World Phases" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/achievements.webp"><img src="assets/store/achievements.webp" alt="Feats and rewards that unlock new skills and buffs" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/inventory.webp"><img src="assets/store/inventory.webp" alt="No ads and no paywalls. Just you, the loot, and the grind." loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/altar-prestige.webp"><img src="assets/store/altar-prestige.webp" alt="The Altar of Rebirth, coming soon" loading="lazy" /></a></figure>
+        <figure><a class="shot" href="assets/store/large/altar-skilltree.webp"><img src="assets/store/altar-skilltree.webp" alt="The new perk tree, coming soon" loading="lazy" /></a></figure>
+      </div>
+    </section>
+
+    <section class="wrap" id="support">
+      <div class="support">
+        <h2>Support</h2>
+        <p class="flavor" id="flavor"></p>
+        <div class="card">
+          <h3>Need help?</h3>
+          <p>Questions, bug reports, save issues or feedback. Reach out and a real person will get back to you.</p>
+          <a class="btn btn-primary" href="mailto:support@jamitek.com?subject=Void%20Support">Send an email</a>
+          <p class="small" style="margin: 16px 0 0;">Please include your device model and OS version so we can help faster.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="wrap">
+    <nav>
+      <a href="altar.html">The Altar Awakens</a>
+      <a href="/policies/void-privacypolicy.html">Privacy policy</a>
+      <a href="/policies/void-terms.html">Terms</a>
+      <a href="#support">Support</a>
+    </nav>
+    The Void does not grieve. Neither should you.
+  </footer>
+
   <script>
-    var flavors = [
+    window.VOID_FLAVORS = [
       "Even the deepest dungeon has a way out. So does this.",
       "Lost in the dark? A guiding hand is closer than it seems.",
       "No hero stands alone. Send word, and aid will follow.",
       "Stuck on a stage? Some puzzles are solved with a letter, not a sword.",
-      "Every shard you sacrifice teaches us something. So does every message.",
       "The Void answers slowly. We answer faster.",
       "A bug crept in from the breach? Point us to it and we'll cast it back.",
       "Your save is precious. If it falters, we will help you recover it.",
       "Speak into the dark. Unlike the Void, we listen.",
       "Whatever the trouble, it can be mended. Reach out."
     ];
-    var el = document.getElementById("flavor");
-    el.textContent = flavors[Math.floor(Math.random() * flavors.length)];
-    requestAnimationFrame(function () { el.classList.add("show"); });
   </script>
+  <script src="void.js"></script>
 </body>
 </html>

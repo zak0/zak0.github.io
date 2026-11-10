@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Altar Awakens | Void</title>
+  <meta name="description" content="Coming soon to Void: prestige rebuilt from the ground up. Raise your Altar Rank, open a radial constellation of perks ring by ring, and pick your path." />
+  <meta name="theme-color" content="#101018" />
+  <meta property="og:title" content="The Altar Awakens | Void" />
+  <meta property="og:description" content="Prestige rebuilt from the ground up. Coming soon to Void." />
+  <meta property="og:image" content="https://jamitek.com/lootgame/assets/store/og-altar.jpg" />
+  <link rel="icon" href="void-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="void.css" />
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="./"><img src="void-icon.png" alt="" />Void</a>
+    <nav class="nav-links">
+      <a href="altar.html" aria-current="page">The Altar<span class="dot" aria-label="coming soon"></span></a>
+      <a href="./#support">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap altar-hero">
+      <span class="pill pill-green">Coming soon</span>
+      <h1>The Altar Awakens</h1>
+      <p class="flavor">Kneel, burn, rise. The priests stopped counting how many times.</p>
+      <p class="lead">Prestige in Void is being rebuilt from the ground up. Rebirth is no longer a costly last resort. It becomes the engine of every run, and every return makes the next one stronger.</p>
+      <div class="constellation-wrap">
+        <canvas data-constellation data-labels data-interactive data-rank-label="rank-label" data-ring-label="ring-label" aria-label="The new perk tree: a radial constellation with the Altar at its centre and four branches"></canvas>
+      </div>
+      <p class="rank-readout"><span>Altar Rank <strong id="rank-label">0</strong></span><span id="ring-label">Ring 1 opens at Rank 1</span></p>
+      <p class="small muted">Tap or hover a star to see its perk.</p>
+    </section>
+
+    <section class="wrap split">
+      <div>
+        <h2>Rank up the Altar</h2>
+        <p class="lead">Rebirth after a deep enough run and the Altar remembers it. Your Altar Rank rises, each new rank asks for a deeper run than the last, and every rank adds to the shards you earn when you rise again.</p>
+        <p class="muted">Ranks open the perk tree one ring at a time, from the Altar outward. The deeper you have gone, the more of the constellation is yours to claim.</p>
+        <div class="card altar-card" style="margin-top: 24px;">
+          <div class="row">
+            <h3>Altar Rank 9</h3>
+            <span class="pill pill-green">Ready to rank up</span>
+          </div>
+          <div class="bar"><span style="width: 100%;"></span></div>
+          <p class="ok">Rebirth now to reach Rank 10</p>
+          <p class="next">Ring 4 opens at Rank 10</p>
+        </div>
+        <div class="rings" aria-label="Rank needed to open each ring">
+          <div><b>0</b>Ring 0</div>
+          <div><b>1</b>Ring 1</div>
+          <div><b>3</b>Ring 2</div>
+          <div><b>6</b>Ring 3</div>
+          <div><b>10</b>Ring 4</div>
+          <div><b>15</b>Ring 5</div>
+          <div><b>25</b>Ring 6</div>
+        </div>
+        <p class="small muted" style="margin-top: 8px;">Altar Rank needed to open each ring.</p>
+      </div>
+      <div><div class="phone"><img src="assets/shots/altar.webp" alt="The Altar of Rebirth screen showing Altar Rank 9 and the perk tree" /></div></div>
+    </section>
+
+    <section class="wrap">
+      <h2>Four paths to power</h2>
+      <p class="lead muted">The tree splits into four branches, each a different way to play. Perks cost more the more you have invested in other branches, so a focused build climbs further. Where two paths meet, a bridge perk opens from either side.</p>
+      <div class="branches" style="margin-top: 28px;">
+        <div class="card branch" style="--c: var(--warpath);">
+          <h3>Warpath</h3>
+          <p>Combat. The Bulwark holds the line, the Blade ends fights before they start, and Tempo runs down the middle.</p>
+          <div class="keystone"><span class="k">Keystone</span><span class="name">Unbroken Oath</span><span class="fx">Dying takes back only half of your bounty progress</span></div>
+          <div class="keystone"><span class="k">Keystone</span><span class="name">First Strike</span><span class="fx">You always strike first, and your first hit lands harder</span></div>
+        </div>
+        <div class="card branch" style="--c: var(--fortune);">
+          <h3>Fortune</h3>
+          <p>Loot and luck. Richer drops and bounties for the scavenger, better odds at Fortune's Den for the gambler.</p>
+          <div class="keystone"><span class="k">Keystone</span><span class="name">Fortune's Echo</span><span class="fx">A rarity upgrade rolls once more at half the chance</span></div>
+        </div>
+        <div class="card branch" style="--c: var(--echoes);">
+          <h3>Echoes</h3>
+          <p>The rebirth itself. Start runs stronger, carry gold and gear through the flame, and climb back faster.</p>
+          <div class="keystone"><span class="k">Keystone</span><span class="name">Unfaded Heirlooms</span><span class="fx">Heirlooms keep 75% of their stats instead of 50%</span></div>
+        </div>
+        <div class="card branch" style="--c: var(--forge);">
+          <h3>Forge</h3>
+          <p>Crafting. Cheaper upgrades at the Workshop, richer salvage, and materials that go further.</p>
+          <div class="keystone"><span class="k">Keystone</span><span class="name">The Patient Forge</span><span class="fx">Workshop prices are set as if every item had 2 fewer upgrades</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Perks that change the run</h2>
+      <p class="lead muted">Not just bigger numbers. The new perks change how a run starts, what you keep, and how fast you get back to where you were.</p>
+      <div class="perks" style="margin-top: 28px;">
+        <div class="card perk">
+          <div class="top"><h3>Echoed Strength</h3><span class="chip">Minor</span></div>
+          <div class="chips"><span class="chip">Echoes</span></div>
+          <blockquote>"Your body remembers what your mind has forgotten."</blockquote>
+          <div class="effect"><span>At full strength</span>Each run starts at hero level 25</div>
+        </div>
+        <div class="card perk">
+          <div class="top"><h3>Golden Hoard</h3><span class="chip">Minor</span></div>
+          <div class="chips"><span class="chip">Echoes</span></div>
+          <blockquote>"Gold remembers its master across lifetimes."</blockquote>
+          <div class="effect"><span>On unlock</span>10% of your gold kept on rebirth, on top of the starting gold</div>
+        </div>
+        <div class="card perk">
+          <div class="top"><h3>Trailblazer</h3><span class="chip">Minor</span></div>
+          <div class="chips"><span class="chip">Echoes</span></div>
+          <blockquote>"A path once walked is quicker the second time."</blockquote>
+          <div class="effect"><span>On unlock</span>8% lower bounty requirements on phases this hero conquered in earlier runs</div>
+        </div>
+        <div class="card perk">
+          <div class="top"><h3>Heirloom</h3><span class="chip">Bridge</span></div>
+          <div class="chips"><span class="chip">Echoes</span><span class="chip forge">Forge</span></div>
+          <blockquote>"Some things are passed down, even to yourself."</blockquote>
+          <div class="effect"><span>On unlock</span>Your equipped weapon carries through rebirth at 50% of its stats</div>
+        </div>
+        <div class="card perk">
+          <div class="top"><h3>Altar's Favor</h3><span class="chip">Minor</span></div>
+          <div class="chips"><span class="chip">Echoes</span></div>
+          <blockquote>"The Altar remembers those who return to it."</blockquote>
+          <div class="effect"><span>Per level</span>3% more shards from rebirth</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap split">
+      <div class="phone"><img src="assets/shots/perk-altars-favor.webp" alt="A perk dialog showing its price, including the surcharge from other branches" loading="lazy" /></div>
+      <div>
+        <h2>Choose freely. Unweave freely.</h2>
+        <p class="lead">Every rebirth comes with a free Unweave: take back every shard you have spent and build again from scratch.</p>
+        <p class="muted">Try a Warpath run, then a Fortune run, then something in between. A build is never a life sentence.</p>
+      </div>
+    </section>
+
+
+    <section class="wrap cta">
+      <h2>Be ready when it opens</h2>
+      <p class="lead muted" style="margin: 0 auto;">Get Void now and start your climb. The deeper your runs, the more the Altar will have waiting for you.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6774275583">Get it on the App Store</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.jamitek.lootgame.android">Get it on Google Play</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <nav>
+      <a href="./">Void</a>
+      <a href="/policies/void-privacypolicy.html">Privacy policy</a>
+      <a href="/policies/void-terms.html">Terms</a>
+      <a href="./#support">Support</a>
+    </nav>
+    The road toward the Void only turns forward.
+  </footer>
+
+  <script src="void.js"></script>
+</body>
+</html>
