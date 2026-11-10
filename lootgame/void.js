@@ -506,11 +506,31 @@
     });
   }
 
+  // ---------- Videos that play while on screen ----------
+
+  function setupVideos() {
+    var videos = document.querySelectorAll("video[data-autoplay]");
+    if (reducedMotion || !("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var video = entry.target;
+        if (entry.isIntersecting) {
+          var played = video.play();
+          if (played && played.catch) played.catch(function () {});
+        } else if (!video.paused) {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+    videos.forEach(function (video) { observer.observe(video); });
+  }
+
   // ---------- Page setup ----------
 
   function init() {
     startBackground();
     setupLightbox();
+    setupVideos();
 
     document.querySelectorAll("canvas[data-constellation]").forEach(function (canvas) {
       var rankEl = document.getElementById(canvas.getAttribute("data-rank-label") || "");

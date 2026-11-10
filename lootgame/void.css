@@ -357,6 +357,23 @@ section { padding: 56px 0; }
 
 .split .phone { margin: 0 auto; }
 
+.video-section { text-align: center; }
+.video-section .lead { margin: 0 auto; }
+
+.video-phone {
+  margin: 28px auto 0;
+  aspect-ratio: 720 / 1448;
+}
+
+.video-phone video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 27px;
+  background: #000;
+}
+
 /* ---------- Coming soon banner ---------- */
 
 .announce {
